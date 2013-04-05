@@ -1,0 +1,11 @@
+knife:
+  identity_file: IDENTITY_FILE
+  ssh_user: "ubuntu"
+
+knife_ec2:
+  aws_access_key_id: AWS_ACCESS_KEY_ID
+  aws_secret_access_key: AWS_SECRET_ACCESS_KEY
+  ec2_availability_zone: "eu-west-1a"
+  ec2_region: "eu-west-1"
+  ec2_ssh_key: EC2_SSH_KEY
+
