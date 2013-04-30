@@ -32,5 +32,5 @@ knife[:aws_secret_access_key] = config["knife_ec2"]["aws_secret_access_key"]
 knife[:availability_zone]     = config["knife_ec2"]["ec2_availability_zone"]
 knife[:region]                = config["knife_ec2"]["ec2_region"]
 
-knife[:image]                 = "ami-640a0610" # Ubuntu Server 12.10
-knife[:flavor]                = "m1.medium"
+knife[:image]                 = config["knife_ec2"]["image"]
+knife[:flavor]                = config["knife_ec2"]["image"]

@@ -30,6 +30,7 @@ Edit `config/knife.yml` according to your local configuration and your AWS crede
 	knife ssh -m SERVER_URL whoami
 	> SERVER_URL ubuntu
 
+<<<<<<< HEAD
 ### Cookbooks
 
 	# Install a new cookbook
@@ -41,3 +42,5 @@ Edit `config/knife.yml` according to your local configuration and your AWS crede
 	# Add a new recipe to the new nodes run list:
 	knife node run_list add NODENAME 'recipe[getting-started]'
 	
+=======
+>>>>>>> chef-vendor-apache2
