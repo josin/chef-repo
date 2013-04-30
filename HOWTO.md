@@ -2,6 +2,8 @@
 
 ## Getting started
 
+Clone this repo and run `bundle install`
+
 
 ### Set up AWS access
 
@@ -29,8 +31,10 @@ Edit `config/knife.yml` according to your local configuration and your AWS crede
 	# Run ssh command on server with given server URL
 	knife ssh -m SERVER_URL whoami
 	> SERVER_URL ubuntu
+	
+	# Search instance by role
+	knife ssh "role:appserver" whoami
 
-<<<<<<< HEAD
 ### Cookbooks
 
 	# Install a new cookbook
@@ -42,5 +46,17 @@ Edit `config/knife.yml` according to your local configuration and your AWS crede
 	# Add a new recipe to the new nodes run list:
 	knife node run_list add NODENAME 'recipe[getting-started]'
 	
-=======
->>>>>>> chef-vendor-apache2
+# Nodes
+
+	# Show detail of the node
+	knife node show NODENAME
+
+# Roles
+
+	# Add a new role from a file
+	knife role from file app_server.rb
+	
+	# Assign role to a node
+	knife node run_list add NODENAME 'role[app_server]'
+
+
