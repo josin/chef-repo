@@ -20,12 +20,13 @@
 include_recipe "mongodb"
 
 # if we are configuring a shard as a replicaset we do nothing in this recipe
-if !node.recipes.include?("mongodb::shard")
+if !node.recipe?("mongodb::shard")
   mongodb_instance "mongodb" do
     mongodb_type "mongod"
     port         node['mongodb']['port']
     logpath      node['mongodb']['logpath']
     dbpath       node['mongodb']['dbpath']
     replicaset   node
+    enable_rest  node['mongodb']['enable_rest']
   end
 end
