@@ -1,3 +1,4 @@
+.DS_Store
 .rvmrc
 .rake_test_cache
 
@@ -8,3 +9,5 @@ config/knife.yml
 ###
 .chef/*.pem
 .chef/encrypted_data_bag_secret
+
+.vagrant

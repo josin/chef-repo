@@ -12,6 +12,12 @@ Clone this repo and run `bundle install`
 Edit `config/knife.yml` according to your local configuration and your AWS credentials.
 
 
+### Install Vagrant for trying cookbooks locally
+
+	# Install vagrant from http://www.vagrantup.com/
+	# install omnibus plugin to get latest versions of chef
+	vagrant plugin install vagrant-omnibus
+
 ## Knife commands
 
 
@@ -39,6 +45,10 @@ Edit `config/knife.yml` according to your local configuration and your AWS crede
 
 	# Install a new cookbook
 	knife cookbook site install getting-started
+
+	# Download a new cookbook
+	knife cookbook site download redis
+
 
 	# Upload cookbook to chef server
 	knife cookbook upload getting-started
